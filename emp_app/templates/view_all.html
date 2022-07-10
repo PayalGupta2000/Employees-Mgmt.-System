@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+</head>
+<style>
+    table{
+        border: 2px solid black;
+        width:100%;
+        border-style: groove;
+        
+
+    }
+
+    tbody{
+        text-align:center;
+        color:black;
+    }
+
+    table td, table th {
+    border: 1px solid black;
+}
+h1{
+    color:coral;
+    text-align:center;
+}
+</style>
+
+</style>
+<body>
+    <h1>All Employee Details</h1>
+    <table>
+        <tr>
+            <th>Emp Id</th>
+            <th>First Name</th>
+            <th>Last  Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+
+            <th>Bonus</th>
+
+            <th>Role</th>
+
+            <th>Phone Number</th>
+            
+
+            <th>Location</th>
+
+            <th>Hire Date</th>
+
+        </tr>
+        {% for emp in emps %}
+    
+
+    <tbody>
+        <tr>
+            <th>{{emp.id}}</th>
+            <td>{{emp.first_name}}</td>
+            <td>{{emp.last_name}}</td>
+
+            <td>{{emp.dept.name}}</td>
+            
+
+            <td>{{emp.salary}}</td>
+
+            <td>{{emp.bonus}}</td>
+
+            <td>{{emp.role.name}}</td>
+
+            <td>{{emp.phone_number}}</td>
+
+            <td>{{emp.dept.location}}</td>
+            <td>{{emp.hire_date}}</td>
+
+            
+
+        </tr>
+
+    </tbody>
+    {% endfor %}
+    </table>
+    
+    
+</body>
+</html>
